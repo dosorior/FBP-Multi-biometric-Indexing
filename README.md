@@ -16,7 +16,9 @@ The development of large-scale identification systems that ensure the privacy pr
  Pages = {},
  Title = {Privacy-preserving Multi-biometric Indexing based on Frequent Binary Patterns},
  Volume = {},
- Year = {submitted 2023, pre-print in arxiv}
+ Year = {2024}
+ doi={10.1109/TIFS.2024.3386310}
+
 }
 
 ```
