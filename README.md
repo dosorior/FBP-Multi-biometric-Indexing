@@ -53,13 +53,13 @@ Project Organization
 
     ├── LICENSE
     ├── README.md                       <- The top-level README for developers using this project.   
-    ├── controller                      <- Create Enrolmente,Search,Indexing Scheme, and Normalization.
-    ├── frequent_pattern_search         <- Create different Fusion of Information (Ensemble Strategies)
+    ├── controller                      <- Create Enrolmente, Search, and Indexing Scheme
+    ├── frequent_pattern_search         <- Create different strategies of Information Fusion
     ├── images                          <- Figures for the README
     ├── preparing_db                    <- Define protocol of the database to evaluate here
-    ├── FBPConcatenation_Bio            <- Ensemble 1: Concatenation FBP -- open-set scenario + score fusion
-    ├── FBPMostRanked_Bio               <- Ensemble 2: Ranked-codes FBP -- open-set scenario + score fusion
-    ├── FBPXORPatterns_Bio              <- Ensemble 3: XOR-coded FBP -- open-set scenario + score fusion
+    ├── FBPConcatenation_Bio            <- Ensemble 1: Concatenation FBP -- open-set scenario 
+    ├── FBPMostRanked_Bio               <- Ensemble 2: Ranked-codes FBP -- open-set scenario 
+    ├── FBPXORPatterns_Bio              <- Ensemble 3: XOR-coded FBP -- open-set scenario 
 
 --------
 
