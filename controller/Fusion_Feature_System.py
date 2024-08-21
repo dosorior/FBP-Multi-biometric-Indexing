@@ -5,6 +5,11 @@ import operator
 import scipy
 from scipy import spatial 
 
+"""
+This class creates enrolment and search biometric system. It can work on simple biometric systems 
+and multi-biometric systems. Indexing scheme is built on the proof-of-concept of Frequent Binary Patterns
+
+"""
 
 class Fusion_Feature:
 
@@ -265,8 +270,6 @@ class Fusion_Feature:
 
     
     """Compators functions"""
-
-
     def hamming_comparison(self, feat_s, list_feat):
 
         list_scores = []
@@ -307,8 +310,6 @@ class Fusion_Feature:
     def comparison_grp(self, feat_s, list_feat):
 
         list_scores = []
-
-        list_labels = []
 
         for feat_e in list_feat:
 
@@ -457,7 +458,7 @@ class Fusion_Feature:
 
         return candidates_lables,candidates_scores
 
-    
+    #####Simple concatenation of two face embeddings#####
     def concatenation_features_subjects(self,bio1,bio2,bio3,number_bio):
 
         # feat_bio1 = np.load(bio1)

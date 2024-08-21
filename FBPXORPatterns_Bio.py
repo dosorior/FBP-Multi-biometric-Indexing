@@ -123,7 +123,8 @@ def compute_scores(k, i, dataset_bio1, dataset_bio2, filter_keys_bio1, filter_ke
         max_patterns_b2 = frequent_pattern_search.adaptative_ranked_frequent_patterns_feat_concatenated(bio2,length_1)
         integer_val_b1 = enrolment.mapping_search(max_patterns_b1)
         integer_val_b2 = enrolment.mapping_search(max_patterns_b2)
-        maximum_xor_code = frequent_pattern_search.xor_max_multi_modal_2bio(integer_val_b1,integer_val_b2,length_1)
+        maximum_xor_code = frequent_pattern_search.xor_max_multi_modal_2bio(integer_val_b1,integer_val_b2,length_1) ########Ensemble strategy based on FBPXor########
+
         enrolment.save_binning_concat_feat_open_set(maximum_xor_code, bio1, bio2, None, 2) #---> closed-set
         
     #loading feats

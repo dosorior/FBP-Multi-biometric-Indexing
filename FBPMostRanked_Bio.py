@@ -121,7 +121,8 @@ def compute_scores(k, i, dataset_bio1, dataset_bio2, filter_keys_bio1, filter_ke
     for bio1,label_1,bio2,label_2 in zip(enrol_subjects_bio1_load, labels_subjects_bio1, enrol_subjects_bio2_load, labels_subjects_bio2):
         max_patterns_b1 = frequent_pattern_search.adaptative_ranked_frequent_patterns_feat_concatenated(bio1,length_1)
         max_patterns_b2 = frequent_pattern_search.adaptative_ranked_frequent_patterns_feat_concatenated(bio2,length_1)
-        sorted_codes,ranked_code_b1_b2 = frequent_pattern_search.ranking_codes_multi_modality_2bio(max_patterns_b1,max_patterns_b2)
+        sorted_codes,ranked_code_b1_b2 = frequent_pattern_search.ranking_codes_multi_modality_2bio(max_patterns_b1,max_patterns_b2) ####Ensemble strategy: Most ranked FBP####
+
         enrolment.save_binning_concat_feat_open_set(ranked_code_b1_b2, bio1, bio2, None, 2) #---> open-set
         
     #loading feats

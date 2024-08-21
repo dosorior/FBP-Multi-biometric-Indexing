@@ -90,7 +90,6 @@ def min_frequent_binary(list_max_code):
 
 
 
-
 def max_occurrence_search_per_subject_old (bin_dir_feat, length: int):
 
     """List of codes with maximum occurrence
@@ -112,8 +111,6 @@ def max_occurrence_search_per_subject_old (bin_dir_feat, length: int):
     i = 0
 
     while (i < (len(binary_feat)-length)) or (len(binary_feat) - i >= length):
-
-    # for i in range(0, len(binary_feat) - length):
 
         candidate_pattern = binary_feat[i:i+length] 
 
@@ -204,7 +201,6 @@ def max_occurrence_search_per_subject(bin_dir_feat, K_combinations, length, exam
     i = 0
 
     while (i < (len(binary_feat)-length)) or (len(binary_feat) - i >= length):
-    # for i in range(0, len(binary_feat) - length):
 
         candidate_pattern = binary_feat[i:i+length] 
 
@@ -285,6 +281,7 @@ def ranked_frequent_patterns(binary_feat_dir, length: int):
     list_max_code = cleaner_codes(list_max_code)
 
     return list_max_code
+
 
 def random_ranked_frequent_patterns(binary_feat_dir, length: int):
 
@@ -443,6 +440,7 @@ def random_adaptative_ranked_frequent_patterns(binary_feat_dir, length: int):
 
     return list_max_code
 
+####Ensemble strategy: Concatenation of FBP####
 def adaptative_ranked_frequent_patterns_feat_concatenated(binary_feat, length: int):
 
     """Return the top of frequent patterns, given a lenght. Those patterns with number of frequency > 1 are selected.
@@ -490,7 +488,6 @@ def max_occurrence_search_per_subject_concatenated_feat(binary_feat, K_combinati
     i = 0
 
     while (i < (len(binary_feat)-length)) or (len(binary_feat) - i >= length):
-    # for i in range(0, len(binary_feat) - length):
 
         candidate_pattern = binary_feat[i:i+length] 
 
@@ -524,6 +521,8 @@ def max_occurrence_search_per_subject_concatenated_feat(binary_feat, K_combinati
 
     return final_max_code
 
+########Ensemble strategy based on FBPXor for two biometrics########
+
 def xor_max_multi_modal_2bio(integer_val_b1,integer_val_b2,length):
 
     bitwise_xor = operator.__xor__(integer_val_b1[0],integer_val_b2[0])
@@ -531,6 +530,7 @@ def xor_max_multi_modal_2bio(integer_val_b1,integer_val_b2,length):
 
     return bin_value
 
+########Ensemble strategy based on FBPXor for three biometrics########
 
 def xor_max_multi_modal_3bio(integer_val_b1,integer_val_b2, integer_val_b3, length):
 
@@ -541,6 +541,8 @@ def xor_max_multi_modal_3bio(integer_val_b1,integer_val_b2, integer_val_b3, leng
     bin_value = f'{result_or:0{length}b}'
 
     return bin_value
+
+########Ensemble strategy based on FBPXor for two biometrics########
 
 def xor_retrieval_multi_modal_2bio(integer_val_b1,integer_val_b2,length):
 
@@ -556,6 +558,8 @@ def xor_retrieval_multi_modal_2bio(integer_val_b1,integer_val_b2,length):
     list_xor_unique = pd.Series(list_xor).drop_duplicates().tolist()
 
     return list_xor_unique
+
+########Ensemble strategy based on FBPXor for three biometrics########
 
 def xor_retrieval_multi_modal_3bio(integer_val_b1,integer_val_b2,integer_val_b3,length):
 
@@ -576,6 +580,7 @@ def xor_retrieval_multi_modal_3bio(integer_val_b1,integer_val_b2,integer_val_b3,
     return list_xor_unique
 
 
+########Ensemble strategy based on FBPMostRanked_Bio for two biometrics########
 
 def ranking_codes_multi_modality_2bio(list_b1, list_b2):
 
@@ -603,6 +608,8 @@ def ranking_codes_multi_modality_2bio(list_b1, list_b2):
     best_code_rank = sorted_codes[0]
 
     return sorted_codes, best_code_rank
+
+########Ensemble strategy based on FBPMostRanked_Bio for three biometrics########
         
 def ranking_codes_multi_modality_3bio(list_b1, list_b2, list_b3):
 

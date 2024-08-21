@@ -193,7 +193,8 @@ def compute_scores(k, i, dataset_bio1, dataset_bio2, filter_keys_bio1, filter_ke
         list_scores_comp_bio1 ,list_scores_comp_bio2 = [],[]
         concatenated_feat_retrieval = enrolment.concatenation_features_subjects(b1, b1, None, 2)
 
-        list_final_max_concat_codes = frequent_pattern_search.adaptative_ranked_frequent_patterns_feat_concatenated(concatenated_feat_retrieval, length_1)
+        list_final_max_concat_codes = frequent_pattern_search.adaptative_ranked_frequent_patterns_feat_concatenated(concatenated_feat_retrieval, length_1) ####Ensemble strategy: Concatenation of FBP####
+
 
         list_final_max_concat_codes_reduced = list_final_max_concat_codes[0:args.numberBins]
         list_map_codes_s = enrolment.mapping_search(list_final_max_concat_codes_reduced)
