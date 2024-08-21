@@ -89,15 +89,24 @@ Project Organization
 ### Experiments
 
 #### Analysis of the Computational Workload, Biometric Performance, and different Biometrics
-![Computational Workload and Biometric Characteristic](images/workload_bio.png)
 ![Effect of the parameter K on biometric performance and computational workload](images/bars_workload_k.png)
 
+- Larger k appears to provide a discriminating effect on the built bins, reducing the number of protected templates stored within a bin and thus the overall computational workload.
 
+- Some deterioration in biometric performance is observed while maintaining a low workload.
+
+![Computational Workload and Biometric Characteristic](images/workload_bio.png)
+
+- The overall computational workload appears to be directly proportional to the individual workloads corresponding to each BC.
+
+- The proposed workload increases with the workloads of the types of BCs involved.
 
 #### Benchmark across different fusion strategies
 ![Results of different information fusion](images/DET_ensemble_types.png)
 
+- The Overall computational workload increased but the biometric performance of the overall system improved significantly.
 
+- Biometric performance of the multi-biometric system outperformed at the high-security thresholds: (i.e. FPIR = 0.01%).
 
 
 
